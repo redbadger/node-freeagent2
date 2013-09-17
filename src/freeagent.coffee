@@ -37,7 +37,7 @@ class FreeAgent
         if response.statusCode < 400
           callback null, body
         else
-          callback new Error("#{response.statusCode} : #{body}")
+          callback new Error("#{response.statusCode} : #{JSON.stringify(body)}")
       else
         callback error
   
